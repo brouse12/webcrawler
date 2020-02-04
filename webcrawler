@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+from scraper import scraper
+import argparse
+
+"""
+Script for webscraping 'Fakebook' for secret flags, which will be printed to the terminal. Uses 'scraper' module.
+"""
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("username", help="Enter your username")
+    parser.add_argument("password", help="Enter your password")
+    args = parser.parse_args()
+    scraper.flow(args.username, args.password)
